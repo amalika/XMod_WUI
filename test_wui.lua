@@ -1,4 +1,4 @@
-local wui = require 'wui'
+local wui = require 'wui.wui'
 
 local globalStyle = {
     scroller = {

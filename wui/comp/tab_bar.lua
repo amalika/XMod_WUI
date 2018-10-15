@@ -3,7 +3,7 @@
   @Repo   https://github.com/xxzhushou/WUI
 ]]--
 
-local wutils = require 'wutils.wUtils'
+local wutils = require 'wui.utils'
 
 local wtab_bar = {
     itemLayout = function ()

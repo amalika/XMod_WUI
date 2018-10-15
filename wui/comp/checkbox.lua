@@ -3,8 +3,8 @@
   @Repo   https://github.com/xxzhushou/WUI
 ]]--
 
-local wutils = require 'wutils.wUtils'
-local wcell = require 'wcomp.wCell'
+local wutils = require 'wui.utils'
+local wcell = require 'wui.comp.cell'
 
 local wcheckbox = {
     layout = function ()
