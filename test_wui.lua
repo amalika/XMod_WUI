@@ -568,6 +568,6 @@ print('show view')
 -- 显示UI，但不会阻塞
 context:show()
 local count = 1
-while not context:closed() do
+while true do
     sleep(100)
 end
