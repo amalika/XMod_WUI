@@ -9,10 +9,11 @@ WUI是基于XMod引擎2.0及以上版本的UI扩展库。
 * `wui.CheckboxList`勾选框列表
 * `wui.TabBar`标签栏A
 * `wui.TabPage`标签栏B
-* `wui.GridSelect `多选框
+* `wui.GridSelect`多选框
+* `wui.DropDown`下拉框（v1.1.0新增）
 
 用法参见test.lua中使用例子。
 
-详细中文文档介绍：[官方扩展UI库 —— WUI](https://www.zybuluo.com/xxzhushou/note/1271276#%E5%AE%98%E6%96%B9%E6%89%A9%E5%B1%95ui%E5%BA%93-wui)
+详细中文文档介绍：[WUI — 官方UI扩展模块](https://www.yuque.com/irvinpang/xxzhushou/xmod_api_ext_wui)
 
 > License Under MIT by @xxzhushou
