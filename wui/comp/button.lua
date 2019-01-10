@@ -145,6 +145,12 @@ function wbutton.createLayout(layout)
     return layout;
 end
 
+function wbutton.createView(context, layout)
+    layout.config = layout.config or {}
+    local layout = wbutton.createLayout(layout)
+    return context:createView(layout)
+end
+
 function wbutton.setOnClickedCallback(view, callback)
     local onClicked = function (id, action)
         callback(id, action)
