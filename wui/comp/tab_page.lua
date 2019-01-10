@@ -244,8 +244,10 @@ function wtab_page.setOnSelectedCallback(view, callback)
                 local activeBottom = itemView:getSubview(3)
 
                 image:setAttr('src', imageSrc)
-                text:setStyle('font-weight', fontWeight)
-                text:setStyle('color', textColor)
+                text:setStyle({
+                    ['font-weight'] = fontWeight,
+                    color = textColor
+                })
 
                 if tabStyle.hasActiveBottom then
                     local bkgColor = currentPage == i and tabStyle.activeBottomColor or 'transparent'

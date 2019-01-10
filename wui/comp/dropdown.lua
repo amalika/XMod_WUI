@@ -302,12 +302,15 @@ function wdropdown.show(dropdownboxView, selectedCallback)
     local x, y = position.x, position.y
 
     local coverView = dropdownboxView:getSubview(1)
-    coverView:setStyle('transition-property', 'opacity')
-    coverView:setStyle('transition-duration', '0.25s')
-    coverView:setStyle('transition-delay', '0s')
-    coverView:setStyle('transition-timing-function', 'ease-out')
-    coverView:setStyle('visibility', 'visible')
-    coverView:setStyle('opacity', 1)
+
+    coverView:setStyle({
+        ['transition-property'] = 'opacity',
+        ['transition-duration'] = '0.25s',
+        ['transition-delay'] = '0s',
+        ['transition-timing-function'] = 'ease-out',
+        visibility = 'visible',
+        opacity = 1
+    })
 
     local popoverView =  dropdownboxView:getSubview(2)
     if x < 0 then
@@ -322,14 +325,16 @@ function wdropdown.show(dropdownboxView, selectedCallback)
         popoverView:setStyle('top', y)
     end
 
-    popoverView:setStyle('transition-property', 'opacity,transform')
-    popoverView:setStyle('transition-duration', '1s')
-    popoverView:setStyle('transition-delay', '0s')
-    popoverView:setStyle('transition-timing-function', 'ease-in')
-    popoverView:setStyle('visibility', 'visible')
-    popoverView:setStyle('opacity', 1)
-    popoverView:setStyle('transform-origin', transformOrigin(arrowPosition))
-    popoverView:setStyle('transform', 'scale(1)')
+    popoverView:setStyle({
+        ['transition-property'] = 'opacity,transform',
+        ['transition-duration'] = '1s',
+        ['transition-delay'] = '0s',
+        ['transition-timing-function'] = 'ease-in',
+        ['transform-origin'] = transformOrigin(arrowPosition),
+        transform = 'scale(1)',
+        visibility = 'visible',
+        opacity = 1
+    })
 
     local popoverArrowView = popoverView:getSubview(1)
     popoverArrowView:setStyle(arrowStyle(arrowPosition))
@@ -364,22 +369,26 @@ end
 
 function wdropdown.hide(dropdownboxView)
     local coverView = dropdownboxView:getSubview(1)
-    coverView:setStyle('transition-property', 'opacity')
-    coverView:setStyle('transition-duration', '0.25s')
-    coverView:setStyle('transition-delay', '0s')
-    coverView:setStyle('transition-timing-function', 'ease')
-    coverView:setStyle('opacity', 0)
-    coverView:setStyle('visibility', 'hidden')
+    coverView:setStyle({
+        ['transition-property'] = 'opacity',
+        ['transition-duration'] = '0.25s',
+        ['transition-delay'] = '0s',
+        ['transition-timing-function'] = 'ease',
+        visibility = 'hidden',
+        opacity = 0
+    })
 
     local popoverView =  dropdownboxView:getSubview(2)
-    popoverView:setStyle('transition-property', 'opacity,transform')
-    popoverView:setStyle('transition-duration', '0.25s')
-    popoverView:setStyle('transition-delay', '0s')
-    popoverView:setStyle('transition-timing-function', 'ease')
-    popoverView:setStyle('opacity', 0)
-    popoverView:setStyle('transform-origin', transformOrigin(arrowPosition))
-    popoverView:setStyle('transform', contentTransform(arrowPosition))
-    popoverView:setStyle('visibility', 'hidden')
+    popoverView:setStyle(
+        ['transition-property'] = 'opacity,transform',
+        ['transition-duration'] = '0.25s',
+        ['transition-delay'] = '0s',
+        ['transition-timing-function'] = 'ease',
+        ['transform-origin'] = transformOrigin(arrowPosition),
+        transform = contentTransform(arrowPosition),
+        visibility = 'hidden',
+        opacity = 0,
+    })
 
 end
 

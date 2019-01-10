@@ -226,8 +226,10 @@ function wtab_bar.setOnSelectedCallback(view, callback)
                 local image = itemView:getSubview(1)
                 local text = itemView:getSubview(2)
                 image:setAttr('src', imageSrc)
-                text:setStyle('font-weight', fontWeight)
-                text:setStyle('color', textColor)
+                text:setStyle({
+                    ['font-weight'] = fontWeight,
+                    color = textColor
+                })
             end
 
             tabContainer:setStyle('left', (currentPage - 1) * (-1 * wtab_bar.propertyMap[parentId].pageWidth))
