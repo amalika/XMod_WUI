@@ -379,7 +379,7 @@ function wdropdown.hide(dropdownboxView)
     })
 
     local popoverView =  dropdownboxView:getSubview(2)
-    popoverView:setStyle(
+    popoverView:setStyle({
         ['transition-property'] = 'opacity,transform',
         ['transition-duration'] = '0.25s',
         ['transition-delay'] = '0s',
