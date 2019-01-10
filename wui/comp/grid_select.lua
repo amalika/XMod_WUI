@@ -125,8 +125,8 @@ function wgrid_option.updateCheckState(view, checked)
         local color = wgrid_option.propertyMap[id].config.color
 
         view:setStyle({
-            ['border-color' ] = checked and checkedBorderColor or borderColor),
-            ['background-color'] = checked and checkedBackgroundColor or backgroundColor)
+            ['border-color' ] = (checked and checkedBorderColor or borderColor),
+            ['background-color'] = (checked and checkedBackgroundColor or backgroundColor)
         })
 
         view:getSubview(1):setStyle('color', checked and checkedColor or color)
