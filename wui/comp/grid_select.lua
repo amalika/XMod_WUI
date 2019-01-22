@@ -209,7 +209,7 @@ function wgrid_select.createLayout(layout)
     end
 
     --Hack options
-    local remainder = #list % cols;
+    local remainder = #list % cols
     local len = remainder ~= 0 and cols - remainder or 0
 
     local index = #options + 1
@@ -254,7 +254,7 @@ function wgrid_select.setOnSelectedCallback(view, selectCallback, overLimitCallb
                 local checkedTmp = wgrid_option.propertyMap[id].checked
 
                 if wgrid_select.propertyMap[parentId].single then
-                    checkedTmp = index == i and not checkedTmp;
+                    checkedTmp = index == i and not checkedTmp
                 elseif index == i then
                     checkedTmp = not checkedTmp
                 end

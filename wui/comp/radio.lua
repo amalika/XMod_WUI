@@ -9,18 +9,15 @@ local wcell = require 'wui.comp.cell'
 local wradio_item = {
     layout = function ()
         return {
-            -- id = 'wradio_item',
             view = 'wradio_cell',
             slots = {
                 {
                     view = 'text',
                     name = 'title',
-                    value = '',
                     style = {
                         color = '#3D3D3D',
-                        ['font-size'] = 30;
+                        ['font-size'] = 30
                     }
-
                 },
                 {
                     view = 'image',
@@ -28,18 +25,17 @@ local wradio_item = {
                     style = {
                         width = 48,
                         height = 48
-                    },
-                    src = ''
+                    }
                 }
             }
         }
     end,
     instanceCount = 0,
     icon = {
-        CHECKED = 'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+        CHECKED = 'xsp://webview_close.png',
         DISABLED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
     },
-    propertyMap= {},
+    propertyMap = {}
 }
 
 function wradio_item.createLayout(layout)
@@ -183,7 +179,6 @@ function wradio.setOnCheckedCallback(view, callback)
         if callback then
             callback(parentId, title, value, items[id].index, oldIndex)
         end
-        
         oldIndex = oldIndex == items[id].index and (checked and oldIndex or 0) or items[id].index
     end
 

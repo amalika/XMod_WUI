@@ -115,7 +115,7 @@ function wcell.createLayout(layout)
     local desc = layout.desc or false
 
     local layout = wcell.layout()
-    local cell_style = layout.style;
+    local cell_style = layout.style
     wutils.mergeTable(cell_style, wcell.style.wcell)
     if hasTopBorder then
         wutils.mergeTable(cell_style, wcell.style.cell_top_border)

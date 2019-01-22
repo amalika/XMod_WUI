@@ -8,7 +8,6 @@ local wutils = require 'wui.utils'
 local wbutton = {
     layout = function ()
         return {
-            -- id = 'wbutton',
             view = 'div',
             style = {
                 width = 720,
@@ -16,7 +15,7 @@ local wbutton = {
                 ['align-items'] = 'center',
                 ['justify-content'] = 'center',
                 ['border-radius'] = 12,
-                opacity = 1;
+                opacity = 1
             },
             subviews = {
                 {
@@ -98,7 +97,7 @@ local wbutton = {
         small = {
             fontSize = 24
         }
-    };
+    }
 }
 
 function wbutton.createLayout(layout)
@@ -121,9 +120,9 @@ function wbutton.createLayout(layout)
     wutils.mergeTable(mrBtnStyle, wbutton.STYLE_MAP[type])
     wutils.mergeTable(mrBtnStyle, wbutton.BUTTON_STYLE_MAP[size])
     wutils.mergeTable(mrBtnStyle, btnStyle)
-    local disableStyle = { opacity = 0.2 };
+    local disableStyle = { opacity = 0.2 }
     if type == 'white' then
-        disableStyle = { ['background-color'] = 'rgba(0, 0, 0, 0.1)' };
+        disableStyle = { ['background-color'] = 'rgba(0, 0, 0, 0.1)' }
     end
     if disabled then
         wutils.mergeTable(mrBtnStyle, disableStyle)
@@ -142,7 +141,7 @@ function wbutton.createLayout(layout)
 
     wbutton.propertyMap[id] = { type = type, disabled = disabled }
 
-    return layout;
+    return layout
 end
 
 function wbutton.createView(context, layout)

@@ -39,6 +39,6 @@ for k, v in pairs(moduleNames) do
     end
 end
 
-wui._VERSION = '1.1.0'
+wui._VERSION = '0.1.0'
 
 return wui

@@ -10,7 +10,7 @@ WUI是基于XMod引擎2.0及以上版本的UI扩展库。
 * `wui.TabBar`标签栏A
 * `wui.TabPage`标签栏B
 * `wui.GridSelect`多选框
-* `wui.DropDown`下拉框（v1.1.0新增）
+* `wui.DropDown`下拉框
 
 用法参见test.lua中使用例子。
 

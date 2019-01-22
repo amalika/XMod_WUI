@@ -18,7 +18,7 @@ local wcheckbox = {
                     value = '',
                     style = {
                         color = '#3D3D3D',
-                        ['font-size'] = 30;
+                        ['font-size'] = 30
                     }
 
                 },

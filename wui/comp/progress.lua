@@ -54,7 +54,7 @@ function wprogress.createLayout(layout)
     layout.subviews[1].style.height = barHeight
     layout.subviews[1].style.width = value / 100 * barWidth
 
-    return layout;
+    return layout
 end
 
 function wprogress.updateValue(view, value)
