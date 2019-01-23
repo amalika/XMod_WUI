@@ -32,7 +32,7 @@ local wradio_item = {
     end,
     instanceCount = 0,
     icon = {
-        CHECKED = 'xsp://webview_close.png',
+        CHECKED = 'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
         DISABLED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
     },
     propertyMap = {}
